@@ -60,7 +60,7 @@ Execute o comando para executar as migrações do Banco de dados.
 php artisan migrate
 ```
 
-Execute o seed para gerar o usuário de acesso, e popular o banco com os dados.
+Execute o seed para gerar o usuário de acesso *todos usuários da tabela user tem acesso ao sistema*, e popular o banco com os dados.
 ```sh
 php artisan db:seed
 ```
