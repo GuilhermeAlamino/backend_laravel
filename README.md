@@ -1,61 +1,72 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+```sh
+API LARAVEL
+```
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Está Application Programming Interface possuem 3 entidades, e para cada entidade suporta operações de criar, ler, atualizar e excluir.
 
-## About Laravel
+A Aplicação contém Autenticação JWT, a onde somente usuario que estão no DB conseguem acessar.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Existem também relações de entidades, e abordei o eagle loading para estes relacionamentos.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Optei por utilizar no back-end as recursividades de paginação, ordenação, search de registros.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Tem tratativas de mensagens, e também acaso algum campo na hora do index da entidade esteja vazio.
 
-## Learning Laravel
+```sh
+Agora vamos rodar o projeto, certifique-se de ter o composer instalado.
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Se quiser clonar via terminal pode abrir o seu *terminal*, e caminhar até a pasta do seu *Ambiente de desenvolvimento* e utilizar o comando ou colar a pasta.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```sh
+*git clone https://github.com/GuilhermeAlamino/backend_laravel.git* 
+```
 
-## Laravel Sponsors
+Agora abre seu editor, vá até a pasta do seu projeto, e atualize as variáveis de ambiente do arquivo (*.env*)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+```sh
+Não esqueça de criar o seu Banco de dados com o nome que vai ficar na variavel de ambiente DB_DATABASE, optei por somente alterar ela.
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+```dosini
 
-## Contributing
+DB_DATABASE=company_management
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Certifique se que tenha composer instalado, se não tiver baixe, pode executar no terminal o comando para verificar -> *composer -v*.
+```sh
+https://getcomposer.org/Composer-Setup.exe
+```
 
-## Code of Conduct
+Agora vai precisar usar comandos em seu *terminal* que ele pode ser de sua preferencia, caminhe até dentro da pasta *do seu projeto*, após isso rode o comando no *terminal*.
+```sh
+*Composer install* ou *Composer update*
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Rode o comando para Gerar a Key do JWT no *terminal*.
+```sh
+php artisan jwt:secret
+```
 
-## Security Vulnerabilities
+Rode o comando para Gerar a key do projeto Laravel ainda no *terminal*.
+```sh
+php artisan key:generate
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Execute o comando para executar as migrações do Banco de dados.
+```sh
+php artisan migrate
+```
 
-## License
+Execute o seed para gerar o usuário de acesso, e popular o banco com os dados.
+```sh
+php artisan db:seed
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Execute o projeto com o seguinte comando, optei por rodar na porta 8001.
+```sh
+php artisan serve --port=8001
+```
