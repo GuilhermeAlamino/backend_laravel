@@ -25,9 +25,8 @@ Se quiser clonar via terminal pode abrir o seu *terminal*, e caminhar até a pas
 Agora abre seu editor, vá até a pasta do seu projeto, e atualize as variáveis de ambiente do arquivo (*.env*)
 
 
-```sh
-Não esqueça de criar o seu Banco de dados com o nome que vai ficar na variavel de ambiente DB_DATABASE, optei por somente alterar ela.
-```
+*Não esqueça de criar o seu Banco de dados com o nome que vai ficar na variavel de ambiente DB_DATABASE, optei por somente alterar ela.*
+
 
 ```dosini
 
