@@ -35,7 +35,7 @@ Coloque a pasta no seu Ambiente de Desenvolvimento, obs: utilize terminal para c
 
 ### `*git clone https://github.com/GuilhermeAlamino/backend_laravel.git*`
 
-## Faça a atualização da variavel de ambiente `*(.env)*` laravel, vai existir o `*.env.example*` crie um arquivo `*(.env)*` portanto não esqueça de criar o nome do banco de dados e deixar o mesmo dessa variável `*DB_DATABASE*`
+## Faça a atualização da variavel de ambiente `*(.env)*` laravel, vai existir o `*.env.example*` crie um arquivo `*(.env)*` portanto não esqueça de criar um banco de dados com o nome company_management e deixar o mesmo dessa variável `*DB_DATABASE*`
 
 ```dosini
 DB_DATABASE=company_management
