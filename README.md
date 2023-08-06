@@ -14,6 +14,19 @@ Tem tratativas de mensagens, e também acaso alguma coluna na hora de puxar o in
 
 Certifique-se de ter o composer instalado.
 
+# Application Programming Interface(API) end-points (login,employee,department,task)
+
+- `/login` - [POST] - esta rota deve fazer login com um usuário (email,senha);
+- `/user` - [POST] - esta rota deve pegar o usuário proprio usuário autenticado pelo access_token (requer autenticação);
+- `/logout` - [POST] - esta rota deve fazer logout do usuário com o access_token (requer autenticação);
+- `/employee` - [GET] - esta rota deve pegar todos funcionário (requer autenticação);
+- `/employee` - [POST] - esta rota deve criar um funcionário (requer autenticação);
+- `/employee/{id}` - [GET] - esta rota deve pegar funcionário especifico pelo id (requer autenticação);
+- `/employee/{id}` - [PUT] - esta rota deve editar funcionário especifico pelo id (requer autenticação);
+- `/employee/{id}` - [DELETE] - esta rota deve deletar funcionário especifico pelo id (requer autenticação).
+
+#Token expira em 1 hora.
+
 # Faça o clone do projeto
 
 Coloque a pasta no seu Ambiente de Desenvolvimento, obs: utilize terminal para colar o comando git clone (entre outros) ou baixe a pasta.
