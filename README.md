@@ -17,7 +17,7 @@ Certifique-se de ter o composer instalado.
 # Application Programming Interface(API) end-points (login,employee,department,task)
 
 - `/login` - [POST] - esta rota deve fazer login com um usuário (email,senha);
-- `/user` - [POST] - esta rota deve pegar o usuário proprio usuário autenticado pelo access_token (requer autenticação);
+- `/user` - [POST] - esta rota deve pegar o proprio usuário autenticado pelo access_token (requer autenticação);
 - `/logout` - [POST] - esta rota deve fazer logout do usuário com o access_token (requer autenticação);
 - `/employee` - [GET] - esta rota deve pegar todos funcionário (requer autenticação);
 - `/employee` - [POST] - esta rota deve criar um funcionário (requer autenticação);
