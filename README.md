@@ -1,71 +1,55 @@
-```sh
-API LARAVEL
-```
+# Introdução do projeto Back-end Application Programming Interface(API) Laravel
 
 Está Application Programming Interface possuem 3 entidades, e para cada entidade suporta operações de criar, ler, atualizar e excluir.
 
-A Aplicação contém Autenticação JWT, a onde somente usuario que estão no DB conseguem acessar.
+A Aplicação contém Autenticação JWT, a onde somente usuario que estão no banco de dados na tabela users conseguem acessar.
 
 Existem também relações de entidades, e abordei o eagle loading para estes relacionamentos.
 
-Optei por utilizar no back-end as recursividades de paginação, ordenação, search de registros.
+Optei por utilizar no back-end as recursividades de paginação, ordenação, search de registros como também mencionado.
 
-Tem tratativas de mensagens, e também acaso algum campo na hora do index da entidade esteja vazio.
+Tem tratativas de mensagens, e também acaso alguma coluna na hora de puxar o index de quaisquer entidade esteja vazio.
 
-```sh
-Agora vamos rodar o projeto, certifique-se de ter o composer instalado.
-```
+# Introdução para rodar a aplicação Back-end Laravel
 
-Se quiser clonar via terminal pode abrir o seu *terminal*, e caminhar até a pasta do seu *Ambiente de desenvolvimento* e utilizar o comando ou colar a pasta.
+Certifique-se de ter o composer instalado.
 
-```sh
-*git clone https://github.com/GuilhermeAlamino/backend_laravel.git* 
-```
+# Faça o clone do projeto
 
-Agora abre seu editor, vá até a pasta do seu projeto, e atualize as variáveis de ambiente do arquivo (*.env*)
+Coloque a pasta no seu Ambiente de Desenvolvimento, obs: utilize terminal para colar o comando git clone (entre outros) ou baixe a pasta.
 
+### `*git clone https://github.com/GuilhermeAlamino/backend_laravel.git*`
 
-*Não esqueça de criar o seu Banco de dados com o nome que vai ficar na variavel de ambiente DB_DATABASE, optei por somente alterar ela.*
-
-
-```dosini
+## Faça a atualização da variavel de ambiente `*(.env)*` laravel, vai existir o `*.env.example*` crie um arquivo `*(.env)*` portanto não esqueça de criar o nome do banco de dados e deixar o mesmo dessa variável `*DB_DATABASE*`
 
 DB_DATABASE=company_management
 DB_USERNAME=root
 DB_PASSWORD=
-```
 
-Certifique se que tenha composer instalado, se não tiver baixe, pode executar no terminal o comando para verificar -> *composer -v*.
-```sh
-https://getcomposer.org/Composer-Setup.exe
-```
+## Execute o comando
 
-Agora vai precisar usar comandos em seu *terminal* que ele pode ser de sua preferencia, caminhe até dentro da pasta *do seu projeto*, após isso rode o comando no *terminal*.
-```sh
-*Composer install* ou *Composer update*
-```
+No Diretorio do projeto, você execute o comando abaixo
 
-Rode o comando para Gerar a Key do JWT no *terminal*.
-```sh
-php artisan jwt:secret
-```
+### `*Composer install* ou *Composer update*`
 
-Rode o comando para Gerar a key do projeto Laravel ainda no *terminal*.
-```sh
-php artisan key:generate
-```
+Agora ainda no diretorio, você pode gerar a Key do JWT com o comando abaixo
 
-Execute o comando para executar as migrações do Banco de dados.
-```sh
-php artisan migrate
-```
+### `php artisan jwt:secret`
 
-Execute o seed para gerar o usuário de acesso obs:*todos usuários da tabela user tem acesso ao sistema*, e popular o banco com os dados.
-```sh
-php artisan db:seed
-```
+Você pode gerar a Key do Laravel com o comando abaixo
 
-Execute o projeto com o seguinte comando, optei por rodar na porta 8001.
-```sh
-php artisan serve --port=8001
-```
+### `*php artisan key:generate*`
+
+Você pode rodar as migrações do banco de dados com o comando abaixo
+
+### `*php artisan migrate*`
+
+Execute o seed para gerar o usuário de acesso obs:*todos usuários da tabela user tem acesso ao sistema*, e para popular o banco com os dados.
+
+### `*php artisan db:seed*`
+
+Execute a API Laravel com o seguinte comando, optei por rodar na porta 8001.
+
+### `*php artisan serve --port=8001*`
+
+O Projeto ira rodar na porta [http://localhost:8001](http://localhost:8001).
