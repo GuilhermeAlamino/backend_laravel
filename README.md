@@ -27,6 +27,8 @@ Certifique-se de ter o composer instalado.
 
 #Token expira em 1 hora.
 
+#Deixei a collection na raiz do projeto `*Company-Management-Back-End.postman_collection.json*`
+
 # Faça o clone do projeto
 
 Coloque a pasta no seu Ambiente de Desenvolvimento, obs: utilize terminal para colar o comando git clone (entre outros) ou baixe a pasta.
