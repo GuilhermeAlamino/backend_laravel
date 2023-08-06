@@ -22,10 +22,11 @@ Coloque a pasta no seu Ambiente de Desenvolvimento, obs: utilize terminal para c
 
 ## Faça a atualização da variavel de ambiente `*(.env)*` laravel, vai existir o `*.env.example*` crie um arquivo `*(.env)*` portanto não esqueça de criar o nome do banco de dados e deixar o mesmo dessa variável `*DB_DATABASE*`
 
+```dosini
 DB_DATABASE=company_management
 DB_USERNAME=root
 DB_PASSWORD=
-
+```
 ## Execute o comando
 
 No Diretorio do projeto, você execute o comando abaixo
