@@ -54,3 +54,5 @@ Execute a API Laravel com o seguinte comando, optei por rodar na porta 8001.
 ### `*php artisan serve --port=8001*`
 
 O Projeto ira rodar na porta [http://localhost:8001](http://localhost:8001).
+
+### `*O acesso para os usuários no sistema serão o e-mail da tabela users e a senha: password em todos os fakers*`
